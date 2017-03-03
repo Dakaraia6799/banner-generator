@@ -24,8 +24,8 @@
         #banner {
             background-color: white;
             text-align: center;
-            height: 200px;
-            width: 200px;
+            height: 400px;
+            width: 400px;
             font-size: 80px;
         }
     </style>
@@ -42,8 +42,8 @@
         <option value="Football"> Football </option>
         <option value="Baseball"> Baseball </option>
         <option value="soccer"> soccer </option>
-    </select><br>
-    <br><h3>What Grade are you in?</h3>
+    </select><br><br>
+    <h3>What Grade are you in?</h3>
     <input type="checkbox" name="grade" value="ninth">I am in 9th grade<br>
 <input type="checkbox" name="grade" value="tenth">I am in 10th grade<br>
 <input type="checkbox" name="grade" value="eleventh">I am in 11th grade<br>
@@ -53,22 +53,20 @@
 </form>
     <br>
     <h3>Favorite Player:</h3>
-    <input id="dname" type="text" name="dname" placeholder="Favorite Player" required><br><br>
+    <input id="userName" type="text" name="typedName" placeholder="Favorite Player" required><br><br>
     
     <div id="userInput" required>
-       <h3> Your Name:<br><br>
-        
-        <input id="userName" type="text" name="dname" placeholder="Full Name" required>
-        <br><br> Background color:
-        <input type="color" id="backgroundColor" />
-        <br><br> Text color:
+        <h3>Your Name:</h3>
+        <input id="userName" type="text" name="typedName" placeholder="Full Name" required><br><br>
+         <h3>Background color:</h3>
+        <input type="color" id="backgroundColor" /><br><br>
+        < <h3>Text color:</h3>
         <input type="color" id="textColor" />
         <br><br>
         <button>See Results</button>
         <br><br>
     </div>
         
-
 </body>
 
 </html>
