@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <title>banner project</title>
+    <title>Banner Generator</title>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
-        $(function(){
-          $('button').click(function(){
+        $(function() {
+            $('button').click(function() {
+              
+                $('#banner').html($('#text').val());
+                
+                var userBackground = $('#backgroundColor').val();
+                $('#banner').val(userBackground).css('background-color', userBackground);
+                
+                var userTextColor = $('#textColor').val();
+                $('#banner').val(userTextColor).css('color', userTextColor);
+            });
             
-          });
         });
     </script>
-  </head>
-  <body>
-  First Name: <input id="title"><br>
-  Last Name: <input id="name"><br>
-  Color: <input id="color1"><br>
-  Color: <input id="color2"><br>
-  <button>See Resluts!</button>
-  </body>
+    <style>
+        #banner {
+            background-color: white;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+            font-size: 80px;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <h1>Instant Banner Creator</h1>
+    <div class="info">
+    <br>
+    <h3>Whats Your Favorite Sport?</h3>
+    <select name="subject">
+        <option value="Basketball" selected> Basketball </option>
+        <option value="Football"> Football </option>
+        <option value="Baseball"> Baseball </option>
+        <option value="soccer"> soccer </option>
+    </select><br>
+    <br><h3>What Grade are you in?</h3>
+    <input type="checkbox" name="grade" value="ninth">I am in 9th grade<br>
+<input type="checkbox" name="grade" value="tenth">I am in 10th grade<br>
+<input type="checkbox" name="grade" value="eleventh">I am in 11th grade<br>
+<input type="checkbox" name="grade" value="twelfth">I am in 12th grade<br>
+<input type="checkbox" name="grade" value="college">I am in college<br>
+<input type="checkbox" name="grade" value="other">other<br>
+</form>
+    <br>
+    <h3>Favorite Player:</h3>
+    <input id="dname" type="text" name="dname" placeholder="Favorite Player" required><br><br>
+    
+    <div id="userInput" required>
+       <h3> Your Name:<br><br>
+        
+        <input id="userName" type="text" name="dname" placeholder="Full Name" required>
+        <br><br> Background color:
+        <input type="color" id="backgroundColor" />
+        <br><br> Text color:
+        <input type="color" id="textColor" />
+        <br><br>
+        <button>See Results</button>
+        <br><br>
+    </div>
+        
+
+</body>
+
 </html>
